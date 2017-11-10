@@ -31,3 +31,24 @@
 
 en:
   hello: "Hello world"
+
+  layout:
+    application:
+      home: "Home"
+      about: "About"
+      questions: "FAQs"
+      contact: "Contact"
+
+  products:
+    index:
+      catalog: "Available Products"
+      new_product: "New Product"
+
+  number:
+    currency:
+      format:
+        unit:             "$"
+        precision:        2
+        separator:        "."
+        delimiter:        ","
+        format:           "%u%n"

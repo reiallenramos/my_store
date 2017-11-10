@@ -1,23 +1,19 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Image url:</strong>
-  <%= image_tag(@product.image_url) %>
+  <%= image_tag(@product.image_url, class: 'image_in_grid') %>
 </p>
 
-<p>
-  <strong>Title:</strong>
+<div class="title_of_product">
   <%= @product.title %>
+</div>
+<%= t('.test') %>
+<p>
+  <%= number_to_currency(@product.price) %>
 </p>
 
 <p>
-  <strong>Description:</strong>
   <%= @product.description %>
-</p>
-
-<p>
-  <strong>Price:</strong>
-  <%= @product.price %>
 </p>
 
 <%= link_to 'Edit', edit_product_path(@product) %> |

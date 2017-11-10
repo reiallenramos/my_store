@@ -1,21 +1,24 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Products</h1>
+<h1 id="header_for_products_page"> <%= t('.catalog') %> </h1>
+
+<%= link_to t('.new_product'), new_product_path %>
 
 <div class="wrapper">
   <% @products.each do |product| %>
-    <div class="<%= cycle('grid_item_1', 'grid_item_2', 'grid_item_3') %> grid_item_basic" >
+    <div class="<%= cycle('grid_item_in_column_1', 'grid_item_in_column_2') %> grid_item_basic" >
 
       <div class="product_grid_wrapper">
         <div class="image_wrapper">
           <%= image_tag(product.image_url, class: 'image_in_grid') %>
         </div>
         <div class="details_in_grid">
-          <%= product.title %>
+          <div class="title_of_product"><%= product.title %></div>
           <%= number_to_currency(product.price) %>
 
+          <hr>
           <div id="description">
-            <%= truncate(strip_tags(product.description), length: 200) %>
+            <%= truncate(strip_tags(product.description), length: 50) %>
           </div>
 
           <div>
@@ -31,5 +34,3 @@
 </div>
 
 <br>
-
-<%= link_to 'New Product', new_product_path %>

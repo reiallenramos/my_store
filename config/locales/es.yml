@@ -1,0 +1,21 @@
+es:
+  layouts:
+    application:
+      home:       "Inicio"
+      about:      "Echos"
+      questions:  "Preguntas"
+      contact:    "Contacto"
+
+  products:
+    index:
+      catalog: "Echos lang"
+      new_product: "Nuevo Producto"
+
+  number:
+    currency:
+      format:
+        unit:             "$US"
+        precision:        2
+        separator:        ","
+        delimiter:        "."
+        format:           "%n&nbsp;%u"
