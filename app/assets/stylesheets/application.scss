@@ -21,7 +21,8 @@
 	--highlight-color: indianred;
 }
 
-body {
+body, html {
+	margin: 0;
 	font-family: 'Roboto', sans-serif;
 }
 
@@ -35,6 +36,10 @@ body {
 .logo_resizer {
 	width: 60px;
 	padding: 10px 15px 10px 15px;
+}
+
+#notice {
+	margin: 0px;
 }
 
 #columns {
@@ -70,17 +75,26 @@ body {
 	}
 }
 
-@media all and (max-width: 900px ) {
-	body, html {
-		margin: 0;
+@media all and (max-width: 700px ) {
+	#button_new_product {
+		display: none;
 	}
 
 	#columns {
   	flex-direction: column;
+  	border: none;
+
+  	#main {
+  		padding: 0px !important;
+  	}
   }
 
   #banner, .logo_resizer {
     display: none;
+  }
+
+  .wrapper {
+  	padding: 0 !important;
   }
 
   #sidebar {
