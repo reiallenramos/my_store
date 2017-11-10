@@ -4,7 +4,7 @@
 
 <div class="wrapper">
   <% @products.each do |product| %>
-    <div class="<%= cycle('grid_item_1', 'grid_item_2', 'grid_item_3') %> grid_item" >
+    <div class="<%= cycle('grid_item_1', 'grid_item_2', 'grid_item_3') %> grid_item_basic" >
 
       <div class="product_grid_wrapper">
         <div class="image_wrapper">
@@ -14,13 +14,15 @@
           <%= product.title %>
           <%= number_to_currency(product.price) %>
 
-          <div>
-            <%= truncate(strip_tags(product.description), length: 400) %>
+          <div id="description">
+            <%= truncate(strip_tags(product.description), length: 200) %>
           </div>
 
+          <div>
           <%= link_to 'Show', product %>
           <%= link_to 'Edit', edit_product_path(product) %>
           <%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %>
+          </div>
         </div>
       </div>
 

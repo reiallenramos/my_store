@@ -1,0 +1,101 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+:root {
+	--main-color: mistyrose;
+	--highlight-color: indianred;
+}
+
+body {
+	font-family: 'Roboto', sans-serif;
+}
+
+#banner{
+	position: relative;
+	background: var(--main-color);
+}
+
+.logo_resizer {
+	width: 60px;
+	padding: 10px 30px 0px ;
+}
+
+#columns {
+	display: flex;
+	border: var(--highlight-color) solid;
+
+
+	#main {
+		flex: 1;
+		padding: 20px;
+	}
+
+	#sidebar {
+		background-color: var(--highlight-color);
+		padding: 20px;
+
+		ul {
+			padding: 0;
+
+			li {
+				list-style: none;
+
+				a {
+					color: white;
+					font-size: small;
+					text-decoration: none;
+				}
+			}
+		}
+	}
+
+}
+
+@media all and (max-width: 1000px ) {
+	#columns {
+  	flex-direction: column;
+  }
+
+  #banner .title {
+    display: none;
+  }
+
+  #banner {
+    height: 5px;
+  }
+
+  .logo_resizer {
+  	display: none;
+  }
+
+  ul {
+  	display: flex;
+  	justify-content: space-around;
+
+  	li {
+  		display: inline-block;
+  	}
+  }
+
+}
+
+@media all and (min-width:500px) and (max-width: 1000px) {
+	#description {
+  	display: none;
+  }
+}

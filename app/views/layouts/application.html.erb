@@ -9,6 +9,22 @@
   </head>
 
   <body class='<%= controller.controller_name %>' >
-    <%= yield %>
+  	<div id="banner">
+      <%= image_tag('logo.svg', alt: 'Test', class: 'logo_resizer') %>
+  	</div>
+  	<div id="columns">
+  		<div id="sidebar">
+  			<ul>
+  				<li><a href="#">Home</a></li>
+  				<li><a href="#">About</a></li>
+  				<li><a href="#">FAQs</a></li>
+  				<li><a href="#">Contact</a></li>
+  			</ul>
+  		</div>
+  		<div id="main">
+  			<%= yield %>
+  		</div>
+
+  	</div>
   </body>
 </html>

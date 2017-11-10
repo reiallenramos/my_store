@@ -13,3 +13,13 @@
 //= require rails-ujs
 //= require turbolinks
 //= require_tree .
+
+//= require jquery3
+//= require jquery_ujs
+//= require_tree .
+
+$(document).ready(function(){
+	$(".image_wrapper").hover(function(){
+		$(this).toggleClass("zoom_image_while_hover");
+	});
+});

@@ -17,7 +17,7 @@
 		grid-gap: 2px;
 	}
 
-	.grid_item {
+	.grid_item_basic {
 		padding: 10px;
 	}
 
@@ -52,10 +52,16 @@
 			justify-content: center;
 			align-items: center;
 
+
+			transition-duration: 1s;
+			
 			.image_in_grid {
 				width: 80%;
 			}
 
+			&:hover{
+				transform: scale(1.5);
+			}
 		}
 
 		.details_in_grid {
@@ -63,9 +69,13 @@
 			grid-column: 2 / 3;
 			grid-row: 1 / 5;
 		}
-
-
 	}
 
+	@media all and (max-width: 500px){
+		.wrapper {
+			display: flex;
+			flex-direction: column;
+		}
+	}
 }
 
